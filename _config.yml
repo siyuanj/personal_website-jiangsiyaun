@@ -1,0 +1,9 @@
+# 在仓库根目录创建 _config.yml
+touch _config.yml
+# _config.yml
+title: My Website
+author: Your Name
+timezone: Asia/Shanghai
+theme: minima  # 可选主题（GitHub Pages 提供免费主题）
+mkdir _posts
+touch _posts/index.md
