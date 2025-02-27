@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-brand">My Site</div>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
         <ul class="nav-links">
             <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
             <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
@@ -21,7 +23,7 @@
 
     <!-- 内容容器 -->
     <div class="content-container">
-        <!-- 各板块内容保持不变，仅在 Notes 板块增加返回按钮 -->
+        <!-- Notes 板块 -->
         <section id="notes" class="section">
             <div class="notes-header">
                 <h1>My Notes</h1>
@@ -29,7 +31,7 @@
             </div>
             <div class="notes-wrapper">
                 <div class="notes-list">
-                    <!-- 笔记列表 -->
+                    <!-- 笔记列表将由 JavaScript 动态生成 -->
                 </div>
                 <div id="note-content" class="note-content hidden"></div>
             </div>
@@ -37,6 +39,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
