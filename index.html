@@ -3,109 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif; 
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- 内容板块 -->
     <div class="container">
-        <h1>Welcome to my website!</h1>
+        <!-- About Me 板块 -->
+        <section id="about" class="section">
+            <h1>About Me</h1>
+            <p>这里是个人简介。</p>
+        </section>
 
-        <h2>导航</h2>
-        <ul>
-            <li><a href="#About me">About me</a></li>
-            <li><a href="#Project">Project</a></li>
-            <li><a href="#Note">Note</a></li> <!-- 已修改 -->
-            <li><a href="#Contact me">Contact me</a></li>
-        </ul>
+        <!-- Projects 板块 -->
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <p>这里是项目介绍。</p>
+        </section>
 
-        <h2 id="About me">About me</h2>
+        <!-- Notes 板块 -->
+        <section id="notes" class="section">
+            <h1>Notes</h1>
+            <div class="notes-list">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#" data-md="note1.md">Note 1</a></li>
+                    <li><a href="#" data-md="note2.md">Note 2</a></li>
+                </ul>
+            </div>
+            <div id="note-content" class="note-content">
+                <!-- Markdown 内容会动态加载到这里 -->
+            </div>
+        </section>
 
-        <h3>个人简介</h3>
-        <p><img src="图片链接" alt="My Picture"><br><em>这是我的个人简介，主要是我的职业、兴趣和专业领域</em></p>
-
-        <h3>个人经历</h3>
-
-        <h4>教育背景</h4>
-        <ul>
-            <li><strong>时间段</strong>: Tsinghua University</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="Project">Project</h2>
-
-        <h3>分类1</h3>
-
-        <h4>项目1: 项目名称</h4>
-        <ul>
-            <li><strong>描述</strong>: 项目简介。</li>
-            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
-        </ul>
-
-        <h4>项目2: 项目名称</h4>
-        <ul>
-            <li><strong>描述</strong>: 项目简介。</li>
-            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
-        </ul>
-
-        <h3>分类2</h3>
-
-        <h4>项目3: 项目名称</h4>
-        <ul>
-            <li><strong>描述</strong>: 项目简介。</li> 
-            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
-        </ul>
-
-        <hr>
-
-        <h2 id="Note">Note</h2> 
-        <h3>Latest Notes</h3> 
-
-        <h4>1. <a href="笔记链接">Note Title</a></h4>
-        <p><strong>Date</strong>: YYYY-MM-DD<br><strong>Abstract</strong>: 笔记简介。</p>
-
-        <h4>2. <a href="笔记链接">Note Title</a></h4> 
-        <p><strong>Date</strong>: YYYY-MM-DD<br><strong>Abstract</strong>: 笔记简介。</p>
-
-        <h3>Categories</h3> <!-- 已修改 -->
-        <ul>
-            <li><a href="#">Category 1</a></li> 
-            <li><a href="#">Category 2</a></li> 
-        </ul>
-
-        <hr>
-
-        <h2 id="Contact me">Contact me</h2>
-        <ul>
-            <li><strong>Name</strong>: 蒋思源(JiangSiyuan)</li>
-            <li><strong>Phone number</strong>: 18811311636</li>
-            <li><strong>E-mail (working)</strong>: <a href="mailto:jiang-sy23@mails.tsinghua.edu.cn">jiang-sy23@mails.tsinghua.edu.cn</a></li>
-            <li><strong>E-mail (personal)</strong>: <a href="mailto:siyaunjiang67@gmail.com">siyaunjiang67@gmail.com</a></li>
-        </ul>
+        <!-- Contact Me 板块 -->
+        <section id="contact" class="section">
+            <h1>Contact Me</h1>
+            <p>联系方式：<a href="mailto:example@example.com">example@example.com</a></p>
+        </section>
     </div>
+
+    <!-- 引入 marked.js 和自定义脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
