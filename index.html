@@ -4,56 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#notes">Notes</a></li>
-            <li><a href="#contact">Contact Me</a></li>
+        <div class="nav-brand">My Site</div>
+        <ul class="nav-links">
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+            <li><a href="#notes"><i class="fas fa-book"></i> Notes</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
 
-    <!-- 内容板块 -->
-    <div class="container">
-        <!-- About Me 板块 -->
-        <section id="about" class="section">
-            <h1>About Me</h1>
-            <p>这里是个人简介。</p>
-        </section>
-
-        <!-- Projects 板块 -->
-        <section id="projects" class="section">
-            <h1>Projects</h1>
-            <p>这里是项目介绍。</p>
-        </section>
-
-        <!-- Notes 板块 -->
+    <!-- 内容容器 -->
+    <div class="content-container">
+        <!-- 各板块内容保持不变，仅在 Notes 板块增加返回按钮 -->
         <section id="notes" class="section">
-            <h1>Notes</h1>
-            <div class="notes-list">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="#" data-md="note1.md">Note 1</a></li>
-                    <li><a href="#" data-md="note2.md">Note 2</a></li>
-                </ul>
+            <div class="notes-header">
+                <h1>My Notes</h1>
+                <button id="back-button" class="hidden"><i class="fas fa-arrow-left"></i> Back</button>
             </div>
-            <div id="note-content" class="note-content">
-                <!-- Markdown 内容会动态加载到这里 -->
+            <div class="notes-wrapper">
+                <div class="notes-list">
+                    <!-- 笔记列表 -->
+                </div>
+                <div id="note-content" class="note-content hidden"></div>
             </div>
-        </section>
-
-        <!-- Contact Me 板块 -->
-        <section id="contact" class="section">
-            <h1>Contact Me</h1>
-            <p>联系方式：<a href="mailto:example@example.com">example@example.com</a></p>
         </section>
     </div>
 
-    <!-- 引入 marked.js 和自定义脚本 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="scripts.js"></script>
 </body>
