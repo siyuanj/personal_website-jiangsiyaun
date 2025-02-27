@@ -9,24 +9,75 @@
             font-family: Arial, sans-serif; 
             line-height: 1.6;
             margin: 20px;
+            background-color: #f5f5f5;
         }
         h1, h2, h3 {
-            color: #333;
+            color: #2c3e50;
         }
         a {
-            color: #0366d6;
+            color: #3498db;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
+            color: #2980b9;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        details {
+            margin: 20px 0;
+            border: 1px solid #ecf0f1;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        details[open] {
+            border-color: #3498db;
+        }
+        summary {
+            font-weight: 600;
+            padding: 15px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            border-radius: 8px;
+            color: #2c3e50;
+        }
+        summary:hover {
+            background-color: #f1f1f1;
+        }
+        .note-content {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 0 0 8px 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 30px 0;
         }
     </style>
 </head>
@@ -38,73 +89,146 @@
         <ul>
             <li><a href="#About me">About me</a></li>
             <li><a href="#Project">Project</a></li>
-            <li><a href="#Note">Note</a></li> <!-- 已修改 -->
+            <li><a href="#Note">Note</a></li>
             <li><a href="#Contact me">Contact me</a></li>
         </ul>
 
         <h2 id="About me">About me</h2>
-
         <h3>个人简介</h3>
-        <p><img src="图片链接" alt="My Picture"><br><em>这是我的个人简介，主要是我的职业、兴趣和专业领域</em></p>
+        <p>blablabla</p>
+        <h4>个人照片</h4>
+        <p><img src=".\my_photo.jpg" alt="Profile" style="width: 300px; border-radius: 8px;"><br>
 
-        <h3>个人经历</h3>
-
-        <h4>教育背景</h4>
+        <h3>教育背景</h3>
         <ul>
-            <li><strong>时间段</strong>: Tsinghua University</li>
+            <li><strong>Tsinghua University</strong></li>
+            
         </ul>
 
         <hr>
 
         <h2 id="Project">Project</h2>
-
-        <h3>分类1</h3>
-
-        <h4>项目1: 项目名称</h4>
+        <h3>项目名称</h3>
+        <p>项目描述</p>
         <ul>
-            <li><strong>描述</strong>: 项目简介。</li>
-            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
+            <li><strong>技术栈</strong>: 技术1, 技术2, 技术3</li>
+            <li><strong>项目链接</strong>: <a href="项目链接">项目链接</a></li>
         </ul>
-
-        <h4>项目2: 项目名称</h4>
-        <ul>
-            <li><strong>描述</strong>: 项目简介。</li>
-            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
-        </ul>
-
-        <h3>分类2</h3>
-
-        <h4>项目3: 项目名称</h4>
-        <ul>
-            <li><strong>描述</strong>: 项目简介。</li> 
-            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
-        </ul>
-
         <hr>
 
-        <h2 id="Note">Note</h2> 
-        <h3>Latest Notes</h3> 
+        <h2 id="Note">Note</h2>
+        
+        <details>
+            <summary>📘 生物信息学方法论 (Week1) - 点击展开</summary>
+            <div class="note-content">
+                <h1>课堂笔记(week1)</h1>
 
-        <h4>1. <a href="笔记链接">Note Title</a></h4>
-        <p><strong>Date</strong>: YYYY-MM-DD<br><strong>Abstract</strong>: 笔记简介。</p>
+    <h2>生物信息学四步骤框架</h2>
 
-        <h4>2. <a href="笔记链接">Note Title</a></h4> 
-        <p><strong>Date</strong>: YYYY-MM-DD<br><strong>Abstract</strong>: 笔记简介。</p>
+    <h3>0. 问题阶段 (Question)</h3>
+    <ul>
+        <li><strong>核心</strong>：基于生物医学知识提出科学问题</li>
+        <li><strong>eg.</strong>
+            <ul>
+                <li>基因变异如何影响癌症发展？</li>
+                <li>RNA剪接异常与神经退行性疾病的关系？</li>
+            </ul>
+        </li>
+    </ul>
 
-        <h3>Categories</h3> <!-- 已修改 -->
-        <ul>
-            <li><a href="#">Category 1</a></li> 
-            <li><a href="#">Category 2</a></li> 
-        </ul>
+    <h3>1. 信息获取</h3>
+    <ul>
+        <li><strong>数据来源</strong>：
+            <ul>
+                <li>DNA/RNA测序数据（如TCGA癌症基因组数据）</li>
+                <li>表观遗传数据（甲基化、组蛋白修饰）</li>
+                <li>蛋白质互作数据（ChIP-seq, CLIP-seq）</li>
+            </ul>
+        </li>
+        <li><strong>技术突破</strong>：
+            <ul>
+                <li>纳米孔测序</li>
+                <li>单分子实时测序</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2. 数据分析</h3>
+    <ul>
+        <li><strong>关键步骤</strong>：
+            <ol>
+                <li>数据清洗（去除低质量reads）</li>
+                <li>序列比对（如BWA, Bowtie）</li>
+                <li>特征提取（基因表达量计算）</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h3>3. 建模</h3>
+
+    <h2>算法（Algorithm）与模型（Model）的区别</h2>
+
+    <h3>1. 定义与核心概念</h3>
+
+    <h4>算法（Algorithm）</h4>
+    <ul>
+        <li><strong>定义</strong>：算法是解决特定问题的一系列明确、有序的步骤或规则。</li>
+        <li><strong>特点</strong>：
+            <ul>
+                <li>强调“如何做”（How），即具体实现方法</li>
+                <li>通常与计算步骤、效率（如时间复杂度）相关</li>
+            </ul>
+        </li>
+        <li><strong>如</strong>：
+            <ul>
+                <li><strong>数字排序算法</strong>（如快速排序、归并排序）</li>
+                <li><strong>动态规划算法</strong>（用于优化问题，如序列比对）</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>模型（Model）</h4>
+    <ul>
+        <li><strong>定义</strong>：模型是对现实世界问题或现象的数学抽象，用于描述数据之间的关系或预测结果</li>
+        <li><strong>特点</strong>：
+            <ul>
+                <li>强调“是什么”（What），即问题的数学表达</li>
+                <li>通常基于概率、统计或机器学习理论。</li>
+            </ul>
+        </li>
+        <li><strong>示例</strong>（课件20，21）：
+            <ul>
+                <li><strong>逻辑回归模型</strong>：用于分类问题，将连续输入映射为概率（0/1）</li>
+                <li><strong>神经网络模型</strong>：通过多层非线性变换处理复杂数据（如图像、序列）</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>总结</h2>
+    <ol>
+        <li>生物信息学四大步骤：提出问题，获取信息，分析数据，建模</li>
+        <li>算法是工具，用于实现模型的训练、优化或预测；模型是框架：描述数据之间的关系或预测结果</li>
+    </ol>
+            </div>
+        </details>
+
+        <details>
+            <summary>📗 学习规划 - 点击展开</summary>
+            <div class="note-content">
+                <h3>监督学习基础概念</h3>
+                <!-- 可以继续添加其他笔记内容 -->
+            </div>
+        </details>
 
         <hr>
 
         <h2 id="Contact me">Contact me</h2>
         <ul>
-            <li><strong>Name</strong>: 蒋思源(JiangSiyuan)</li>
-            <li><strong>Phone number</strong>: 18811311636</li>
-            <li><strong>E-mail (working)</strong>: <a href="mailto:jiang-sy23@mails.tsinghua.edu.cn">jiang-sy23@mails.tsinghua.edu.cn</a></li>
-            <li><strong>E-mail (personal)</strong>: <a href="mailto:siyaunjiang67@gmail.com">siyaunjiang67@gmail.com</a></li>
+            <li><strong>姓名</strong>: 蒋思源</li>
+            <li><strong>电话</strong>: 188-1131-1636</li>
+            <li><strong>学校邮箱</strong>: <a href="mailto:jiang-sy23@mails.tsinghua.edu.cn">jiang-sy23@mails.tsinghua.edu.cn</a></li>
+            <li><strong>个人邮箱</strong>: <a href="mailto:siyaunjiang67@gmail.com">siyaunjiang67@gmail.com</a></li>
+            <li><strong>GitHub</strong>: <a href="https://github.com/siyuanj">https://github.com/siyuanj</a></li>
         </ul>
     </div>
 </body>
