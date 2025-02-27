@@ -3,43 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-brand">My Site</div>
-        <button class="hamburger"><i class="fas fa-bars"></i></button>
-        <ul class="nav-links">
-            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
-            <li><a href="#notes"><i class="fas fa-book"></i> Notes</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    <div class="container">
+        <h1>Welcome to my website!</h1>
+
+        <h2>导航</h2>
+        <ul>
+            <li><a href="#About me">About me</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#Note">Note</a></li> <!-- 已修改 -->
+            <li><a href="#Contact me">Contact me</a></li>
         </ul>
-    </nav>
 
-    <!-- 内容容器 -->
-    <div class="content-container">
-        <!-- Notes 板块 -->
-        <section id="notes" class="section">
-            <div class="notes-header">
-                <h1>My Notes</h1>
-                <button id="back-button" class="hidden"><i class="fas fa-arrow-left"></i> Back</button>
-            </div>
-            <div class="notes-wrapper">
-                <div class="notes-list">
-                    <!-- 笔记列表将由 JavaScript 动态生成 -->
-                </div>
-                <div id="note-content" class="note-content hidden"></div>
-            </div>
-        </section>
+        <h2 id="About me">About me</h2>
+
+        <h3>个人简介</h3>
+        <p><img src="图片链接" alt="My Picture"><br><em>这是我的个人简介，主要是我的职业、兴趣和专业领域</em></p>
+
+        <h3>个人经历</h3>
+
+        <h4>教育背景</h4>
+        <ul>
+            <li><strong>时间段</strong>: Tsinghua University</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="Project">Project</h2>
+
+        <h3>分类1</h3>
+
+        <h4>项目1: 项目名称</h4>
+        <ul>
+            <li><strong>描述</strong>: 项目简介。</li>
+            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
+        </ul>
+
+        <h4>项目2: 项目名称</h4>
+        <ul>
+            <li><strong>描述</strong>: 项目简介。</li>
+            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
+        </ul>
+
+        <h3>分类2</h3>
+
+        <h4>项目3: 项目名称</h4>
+        <ul>
+            <li><strong>描述</strong>: 项目简介。</li> 
+            <li><strong>链接</strong>: <a href="链接">GitHub仓库</a> | <a href="链接">在线演示</a></li>
+        </ul>
+
+        <hr>
+
+        <h2 id="Note">Note</h2> 
+        <h3>Latest Notes</h3> 
+
+        <h4>1. <a href="笔记链接">Note Title</a></h4>
+        <p><strong>Date</strong>: YYYY-MM-DD<br><strong>Abstract</strong>: 笔记简介。</p>
+
+        <h4>2. <a href="笔记链接">Note Title</a></h4> 
+        <p><strong>Date</strong>: YYYY-MM-DD<br><strong>Abstract</strong>: 笔记简介。</p>
+
+        <h3>Categories</h3> <!-- 已修改 -->
+        <ul>
+            <li><a href="#">Category 1</a></li> 
+            <li><a href="#">Category 2</a></li> 
+        </ul>
+
+        <hr>
+
+        <h2 id="Contact me">Contact me</h2>
+        <ul>
+            <li><strong>Name</strong>: 蒋思源(JiangSiyuan)</li>
+            <li><strong>Phone number</strong>: 18811311636</li>
+            <li><strong>E-mail (working)</strong>: <a href="mailto:jiang-sy23@mails.tsinghua.edu.cn">jiang-sy23@mails.tsinghua.edu.cn</a></li>
+            <li><strong>E-mail (personal)</strong>: <a href="mailto:siyaunjiang67@gmail.com">siyaunjiang67@gmail.com</a></li>
+        </ul>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script src="scripts.js"></script>
 </body>
 </html>
